@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Sleeping Interactive Game</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-section">
+        <h1>Interactive Game For Learning About Sleep</h1>
+        <h2>To have a better understanding of sleep hygiene </h2>
+      </div>
+    </div>
+    <div class="section-wrap" id="whole-section">
+      <div class="section">
+        <button type="button" class="button" id="start-button" onclick="start_the_game()">Start</button>
+      </div>
+    </div>
+
+    <div id="first-question" style="display: none;">
+      <!-- <div class="section-below" id="situation-section" style="display: none;">
+        <h2>Situation #1</h2>
+        <p>It is 9 pm right now. Will plans to sleep at 11 pm</p>
+      </div> -->
+      <div class="section-below" id="question-section">
+        <h2>Question #1</h2>
+        <p> It is 9 pm right now. Willy plans to sleep at 11 pm. <br> 
+          What is the best option for Willy to have a good sleep at 11pm? <br>  
+          Please click on the options and see if that helps Willy or not!</p>
+      </div>
+      
+      <div class="flex-container">
+
+        <div class="section-below" id="imgs">
+          <img id="character" src="./img/normal_will-removebg.png" />
+          <img id="coffee_will" src="./img/coffee_will-removebg.png" style="display: none;"/>
+          <img id="sunglasses_will" src="./img/sunglasses_will-removebg.png" style="display: none;" />
+          <img id="alcohol_will" src="./img/alcohol_will-removebg.png" style="display: none;" />
+          <img id="smoking_will" src="./img/smoking_will-removebg.png" style="display: none;" />
+        </div>
+        
+        <div id="option_container">
+          <button type="button" class="option" id="drinking-coffee" data-toggle="modal" data-target="#drinking-coffee-modal" onclick="active_button(event)">Drinking Coffee</button>
+          <button type="button" class="option" id="no-blue-light" data-toggle="modal" data-target="#no-blue-light-modal" onclick="active_button(event)">Minimizing exposure to blue light</button>
+          <button type="button" class="option" id="drinking-alcohol" data-toggle="modal" data-target="#drinking-alcohol-modal" onclick="active_button(event)">Drinking alcohol</button>
+          <button type="button" class="option" id="smoking" data-toggle="modal" data-target="#smoking-modal" onclick="active_button(event)">Smoking cigarettes</button>
+        </div>
+
+        <a href="#second-question"><button type="button" class="button" id="next-second-button">Next</button></a>
+      </div>
+
+      <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="drinking-coffee-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-incorrect">Incorrect</h4>
+              </div>
+              <div class="modal-body">
+                <p>"Caffeine, by virtue of blocking adenosine’s action, leads to a decrease in deep sleep, 
+                  the most restful sleep. So even if you have no problem falling asleep after drinking 
+                  caffeine, your sleep may not be as rejuvenating" (Shatkin and Baroni).
+                </p>
+                <br /> 
+                <p>References</p>
+                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="no-blue-light-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-correct">Correct</h4>
+              </div>
+              <div class="modal-body">
+                <p> Blue light (460-480 nm) suppresses melatonin.
+                  Melatonin is a hormone secreted by the enigmatic pineal gland in response to darkness. 
+                  It modulates our sleep and wake patterns (Shatkin).
+                  Blue light in the evening would trick our brains to think it’s daytime, 
+                  which inhibits the production of melatonin and decreases the quantity and quality of our sleep.
+                  Hence, minimizing the exposure to blue light
+                  could help prevent melatonin loss and fall asleep easier at the desire time.
+                </p>
+                <br /> 
+                <p>References</p>
+                <p>Shatkin, Jess. <cite>Circadian Rhythms.</cite> 2021. PowerPoint Presentation</p>
+                <p>Gunnars, Kris. “How Blocking Blue Light at Night Helps You Sleep.” <cite>Healthline</cite>, Healthline Media, 21 May 2020, https://www.healthline.com/nutrition/block-blue-light-to-sleep-better#tinted-glasses. </p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="drinking-alcohol-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-incorrect">Incorrect</h4>
+              </div>
+              <div class="modal-body">
+                <p> Alcohol increases NREM and reduces REM and Stage 1 in the first sleep cycles.
+                  <ul>
+                    <li>Within a sleep cycle or two, the effects of alcohol are wearing off and “withdrawal” symptoms then occur:
+                      <ul>
+                        <li>Shallow sleep with multiple awakenings (Stage 1 rebound)</li>
+                        <li>REM rebound (often associated with vivid dreams, sweating, and nightmares)</li>
+                      </ul>
+                    </li>
+                    <li>As a result, drinking more than 1 drink before bed may result in Excessive daytime sleepiness (EDS)</li>
+                    <li>Acts as a muscle relaxant and can exacerbate snoring and sleep apnea</li>
+                    <li>Alcohol 6 hours before bed may fragment sleep</li>
+                  </ul> 
+                  Overall, alcohol <b>decreases the sleep quality</b>.             
+                </p>
+                <br /> 
+                <p>References</p>
+                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="smoking-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-incorrect">Incorrect</h4>
+              </div>
+              <div class="modal-body">
+                <p> 
+                  <ul>
+                    <li>Nicotine is thought to exert its strongest effects on sleep architecture at the 
+                      beginning of sleep but then exert effects of nicotine withdrawal later in sleep epoch.</li>
+                    <li>Dose dependent
+                      <ul>
+                        <li>Lower doses tend to stimulate REM</li>
+                        <li>Higher doses suppress REM</li>
+                      </ul>
+                    </li>
+                    <li>Rebound upon discontinuation increases wake time and decreases Stage 3</li>
+                    <li>Withdrawal begins 6 – 12 hours after last use and can last 3 weeks</li>
+                  </ul> 
+                  Overall, nicotine <b>disrupts sleep quality</b> and causes individuals to wake at night.             
+                </p>
+                <br /> 
+                <p>References</p>
+                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      <hr class="divider">
+    </div>
+
+    <!-- Second question -->
+    
+    <div id="second-question" style="display: none;">
+      <div id="same-background">
+        <!-- <div class="section-below" id="situation-section" style="display: none;">
+          <h2>Situation #2</h2>
+          <p>It is 9 pm right now. Will plans to sleep at 11 pm</p>
+        </div> -->
+        <div class="section-below" id="question-section">
+          <h2>Question #2</h2>
+          <p>Willy tries to improve his sleep hygiene. <br>  
+            Which recommendation would you give Willy to help him improve his sleep hygiene?</p>
+        </div>
+      </div>
+      
+      
+      <div class="flex-container">
+
+        <div class="section-below" id="q2_imgs">
+          <img id="q2_character" src="./img/normal_will-removebg.png" />
+          <img id="hw_on_bed_will" src="./img/hw_on_bed.png" style="display: none;"/>
+          <img id="light_will" src="./img/light.png" style="display: none;" />
+          <img id="regular_schedule_will" src="./img/regular_schedule.png" style="display: none;" />
+          <img id="napping_will" src="./img/nap.png" style="display: none;" />
+        </div>
+        
+        <div id="q2_option_container">
+          <button type="button" class="option" id="doing-hw" data-toggle="modal" data-target="#doing-hw-modal" onclick="active_button_q2(event)">Doing homework on the bed</button>
+          <button type="button" class="option" id="room-light" data-toggle="modal" data-target="#room-light-modal" onclick="active_button_q2(event)">Sleeping with lights on</button>
+          <button type="button" class="option" id="regular-schedule" data-toggle="modal" data-target="#regular-schedule-modal" onclick="active_button_q2(event)">Maintain regular bedtime and wake time</button>
+          <button type="button" class="option" id="long-nap" data-toggle="modal" data-target="#long-nap-modal" onclick="active_button_q2(event)">Have a long nap (2 hours nap) during daytime</button>
+        </div>
+        
+      </div>
+
+      <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="doing-hw-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-incorrect">Incorrect</h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  We should only use the bed for sex and sleep!
+                  This helps strengthen our brains and bodies' association between bed and sleep. <br>
+                  In other words, if we spend lots of time awake on bed, our brains and bodies 
+                  would associate bed with wakefulness and make us harder to fall asleep.
+                </p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="room-light-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-incorrect">Incorrect</h4>
+              </div>
+              <div class="modal-body">
+                <p> We should keep the room dark during sleep! <br>
+                  Light is a powerful zeitgeber that helps us entrain circadian rhythm and encourage feelings of wakefulness.   
+                  That's why light exposure during the evening would make us harder to fall asleep.
+                </p>
+                <br /> 
+                <p>References</p>
+                <p>Shatkin, Jess. <cite>Circadian Rhythms.</cite> 2021. PowerPoint Presentation</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="regular-schedule-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-correct">Correct</h4>
+              </div>
+              <div class="modal-body">
+                <p> Having a regular bedtime and wake time could help us maintain the timing of the body's internal clock 
+                  and help us fall asleep and wake up more easily.             
+                </p>
+                <br /> 
+                <p>References</p>
+                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="long-nap-modal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title-incorrect">Incorrect</h4>
+              </div>
+              <div class="modal-body">
+                <p> Taking a nap(sleeping) would decrease sleep pressure, 
+                  so having a long nap may affect the ability to fall asleep at night.
+                  Also, having a long nap would have a higher chance that sleep inertia occurs.            
+                </p>
+                <br /> 
+                <p>References</p>
+                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+      </div>
+      <hr class="divider">
+    </div>    
+  </body>
+</html>
+
+
