@@ -1,23 +1,23 @@
 
-function parallax_height() {
-  var scroll_top = $(this).scrollTop();
-  var header_height = $(".sample-header-section").outerHeight();
-  $(".sample-section").css({ "margin-top": header_height });
-  $(".sample-header").css({ height: header_height - scroll_top });
-}
-parallax_height();
-$(window).scroll(function() {
-  parallax_height();
-});
-$(window).resize(function() {
-  parallax_height();
-});
+/**
+ * Author: Betty Kao
+ * Date: May/4/2021
+ *
+ * This is the index.js page for index.html
+ * This is the javaScript that is used on index.html.
+ **/
 
 function start_the_game(){  
   id("whole-section").classList.add("hidden");
   id("first-question").style.display = 'block';
   id("second-question").style.display = 'block';
+  id("third-question").style.display = 'block';
+  id("fourth-question").style.display = 'block';
+  id("fifth-question").style.display = 'block';
   id("next-second-button").style.display = 'block';
+  id("next-third-button").style.display = 'block';
+  id("next-fourth-button").style.display = 'block';
+  id("next-fifth-button").style.display = 'block';
   var x = document.getElementsByClassName("section-below");
   var i;
   for (i = 0; i < x.length; i++) {
@@ -89,6 +89,100 @@ function active_button_q2(e) {
     id("napping_will").style.display = 'block';
   } else{
     id("q2_character").style.display = 'block';
+  }
+}
+
+function active_button_q3(e) {
+  // console.log($(e).parent().attr('id'));
+  var buttons_active = document.querySelectorAll('#q3_option_container button.active');
+  if (buttons_active !== null) {
+    [].forEach.call(buttons_active, function(el){
+      el.classList.remove("active");
+    });
+  }
+
+  e.target.classList.add("active");
+  imgs = document.querySelectorAll("#q3_imgs img");
+  for (i = 0; i < imgs.length; i++) {
+    if (imgs[i].style.display !== 'none') {
+      imgs[i].style.display = 'none';
+    }
+  }
+
+  var cur_id = e.target.id;
+  if(cur_id === "brain"){
+    id("brain_will").style.display = 'block';
+  } else if (cur_id === "meeting") {
+    id("boring_meeting_will").style.display = 'block';
+  } else if (cur_id === "warm-room") {
+    id("warm_room_will").style.display = 'block';
+  } else if (cur_id === "all-myths") {
+    id("all_myths_will").style.display = 'block';
+  } else{
+    id("q3_character").style.display = 'block';
+  }
+}
+
+function active_button_q4(e) {
+  // console.log($(e).parent().attr('id'));
+  var buttons_active = document.querySelectorAll('#q4_option_container button.active');
+  if (buttons_active !== null) {
+    [].forEach.call(buttons_active, function(el){
+      el.classList.remove("active");
+    });
+  }
+
+  e.target.classList.add("active");
+  imgs = document.querySelectorAll("#q4_imgs img");
+  for (i = 0; i < imgs.length; i++) {
+    if (imgs[i].style.display !== 'none') {
+      imgs[i].style.display = 'none';
+    }
+  }
+
+  var cur_id = e.target.id;
+  if(cur_id === "7am"){
+    id("7_will").style.display = 'block';
+  } else if (cur_id === "9am") {
+    id("9_will").style.display = 'block';
+  } else if (cur_id === "10am") {
+    id("10_will").style.display = 'block';
+  } else if (cur_id === "12pm") {
+    id("12_will").style.display = 'block';
+  } else{
+    id("q4_character").style.display = 'block';
+  }
+}
+
+
+function active_button_q5(e) {
+  // console.log($(e).parent().attr('id'));
+  var buttons_active = document.querySelectorAll('#q5_option_container button.active');
+  if (buttons_active !== null) {
+    [].forEach.call(buttons_active, function(el){
+      el.classList.remove("active");
+    });
+  }
+
+  e.target.classList.add("active");
+  imgs = document.querySelectorAll("#q5_imgs img");
+  for (i = 0; i < imgs.length; i++) {
+    if (imgs[i].style.display !== 'none') {
+      imgs[i].style.display = 'none';
+    }
+  }
+
+  var cur_id = e.target.id;
+  if(cur_id === "hr"){
+    id("hr_will").style.display = 'block';
+  } else if (cur_id === "bp") {
+    id("bp_will").style.display = 'block';
+  } else if (cur_id === "hunger") {
+    id("hunger_will").style.display = 'block';
+  } else if (cur_id === "pain") {
+    id("pain_will").style.display = 'block';
+  } else{
+    id("q5_character").style.display = 'block';
   }
 }
 

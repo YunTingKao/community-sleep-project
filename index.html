@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!--
+  Author: Betty Kao
+  Date: May/4/2021
+
+  This is the index.html page.
+  An interactive game written by on HTML, CSS, and Javascript
+-->
 
 <html lang="en">
   <head>
@@ -18,7 +25,7 @@
     <div class="header">
       <div class="header-section">
         <h1>Interactive Game For Learning About Sleep</h1>
-        <h2>To have a better understanding of sleep hygiene </h2>
+        <h2>To have a better understanding of sleep </h2>
       </div>
     </div>
     <div class="section-wrap" id="whole-section">
@@ -28,10 +35,6 @@
     </div>
 
     <div id="first-question" style="display: none;">
-      <!-- <div class="section-below" id="situation-section" style="display: none;">
-        <h2>Situation #1</h2>
-        <p>It is 9 pm right now. Will plans to sleep at 11 pm</p>
-      </div> -->
       <div class="section-below" id="question-section">
         <h2>Question #1</h2>
         <p> It is 9 pm right now. Willy plans to sleep at 11 pm. <br> 
@@ -76,9 +79,10 @@
                   caffeine, your sleep may not be as rejuvenating" (Shatkin and Baroni).
                 </p>
                 <br /> 
-                <p>References</p>
-                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
-
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                </div>  
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -108,10 +112,11 @@
                   could help prevent melatonin loss and fall asleep easier at the desire time.
                 </p>
                 <br /> 
-                <p>References</p>
-                <p>Shatkin, Jess. <cite>Circadian Rhythms.</cite> 2021. PowerPoint Presentation</p>
-                <p>Gunnars, Kris. “How Blocking Blue Light at Night Helps You Sleep.” <cite>Healthline</cite>, Healthline Media, 21 May 2020, https://www.healthline.com/nutrition/block-blue-light-to-sleep-better#tinted-glasses. </p>
-
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess. <cite>Circadian Rhythms.</cite> 2021. PowerPoint Presentation</span>
+                  <span>Gunnars, Kris. “How Blocking Blue Light at Night Helps You Sleep.” <cite>Healthline</cite>, Healthline Media, 21 May 2020, https://www.healthline.com/nutrition/block-blue-light-to-sleep-better#tinted-glasses. </span>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -147,8 +152,10 @@
                   Overall, alcohol <b>decreases the sleep quality</b>.             
                 </p>
                 <br /> 
-                <p>References</p>
-                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -185,8 +192,10 @@
                   Overall, nicotine <b>disrupts sleep quality</b> and causes individuals to wake at night.             
                 </p>
                 <br /> 
-                <p>References</p>
-                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -203,12 +212,12 @@
     <!-- Second question -->
     
     <div id="second-question" style="display: none;">
-      <div id="same-background">
+      <div class="same-background">
         <!-- <div class="section-below" id="situation-section" style="display: none;">
           <h2>Situation #2</h2>
           <p>It is 9 pm right now. Will plans to sleep at 11 pm</p>
         </div> -->
-        <div class="section-below" id="question-section">
+        <div class="section-below">
           <h2>Question #2</h2>
           <p>Willy tries to improve his sleep hygiene. <br>  
             Which recommendation would you give Willy to help him improve his sleep hygiene?</p>
@@ -232,6 +241,7 @@
           <button type="button" class="option" id="regular-schedule" data-toggle="modal" data-target="#regular-schedule-modal" onclick="active_button_q2(event)">Maintain regular bedtime and wake time</button>
           <button type="button" class="option" id="long-nap" data-toggle="modal" data-target="#long-nap-modal" onclick="active_button_q2(event)">Have a long nap (2 hours nap) during daytime</button>
         </div>
+        <a href="#third-question"><button type="button" class="button" id="next-third-button">Next</button></a>
         
       </div>
 
@@ -253,6 +263,11 @@
                   In other words, if we spend lots of time awake on bed, our brains and bodies 
                   would associate bed with wakefulness and make us harder to fall asleep.
                 </p>
+                <br>
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess. <cite>Circadian Rhythms.</cite> 2021. PowerPoint Presentation</span>
+                </div>
 
               </div>
               <div class="modal-footer">
@@ -279,9 +294,10 @@
                   That's why light exposure during the evening would make us harder to fall asleep.
                 </p>
                 <br /> 
-                <p>References</p>
-                <p>Shatkin, Jess. <cite>Circadian Rhythms.</cite> 2021. PowerPoint Presentation</p>
-
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess. <cite>Circadian Rhythms.</cite> 2021. PowerPoint Presentation</span>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -306,8 +322,10 @@
                   and help us fall asleep and wake up more easily.             
                 </p>
                 <br /> 
-                <p>References</p>
-                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -330,11 +348,14 @@
               <div class="modal-body">
                 <p> Taking a nap(sleeping) would decrease sleep pressure, 
                   so having a long nap may affect the ability to fall asleep at night.
-                  Also, having a long nap would have a higher chance that sleep inertia occurs.            
+                  Also, having a long nap would have a higher chance that sleep inertia occurs.
+                  So if you really need to nap, make sure to keep it to 30 minutes or less to avoid sleep inertia. <br />
                 </p>
                 <br /> 
-                <p>References</p>
-                <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                <div class="references">
+                  <p>References</p>
+                  <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Hygiene.</cite> 2021. PowerPoint Presentation</span>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -343,12 +364,473 @@
             
           </div>
         </div>
-
-        
       </div>
       <hr class="divider">
+
+      <!-- Third Question -->
+      <div id="third-question" style="display: none;">
+        <div class="same-background">
+          <div class="section-below">
+            <h2>Question #3</h2>
+            <p> Willy wants to dispel a myth about sleep.  <br> 
+              Can you help him define which option or options are myths about sleep?
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex-container">
+  
+          <div class="section-below" id="q3_imgs">
+            <img id="q3_character" src="./img/normal_will-removebg.png" />
+            <img id="brain_will" src="./img/brain.png" style="display: none;"/>
+            <img id="boring_meeting_will" src="./img/boring.png" style="display: none;" />
+            <img id="warm_room_will" src="./img/warm.png" style="display: none;" />
+            <img id="all_myths_will" src="./img/all.png" style="display: none;" />
+          </div>
+          
+          <div id="q3_option_container">
+            <button type="button" class="option" id="brain" data-toggle="modal" data-target="#brain-modal" onclick="active_button_q3(event)">Our brains shut down during sleep</button>
+            <button type="button" class="option" id="meeting" data-toggle="modal" data-target="#meeting-modal" onclick="active_button_q3(event)">A boring meeting makes us sleepy</button>
+            <button type="button" class="option" id="warm-room" data-toggle="modal" data-target="#warm-room-modal" onclick="active_button_q3(event)">A warm room makes us sleepy</button>
+            <button type="button" class="option" id="all-myths" data-toggle="modal" data-target="#all-myths-modal" onclick="active_button_q3(event)">All of above are myths</button>
+          </div>
+          <a href="#fourth-question"><button type="button" class="button" id="next-fourth-button">Next</button></a>
+        </div>
+  
+        <div class="container">
+          <!-- Modal -->
+          <div class="modal fade" id="brain-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  
+                  <p> The correct answer should be "All of above are myths"! <br>
+                    Our brains shut down during sleep is a  <span style="color: #ff0000">MYTH</span>! <br>
+                    "The brain remains active during sleep. Its patterns of activity change during different sleep stages, and in rapid eye movement (REM) sleep, 
+                    brain activity ramps up to a level that shares similarities with when you’re awake. Far from shutting down, shifts in brain activity during sleep are believed to be part of 
+                    why sleep is critical to effective thinking, memory, and emotional processing" (Suni).
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Suni, Eric. “Common Myths and Facts About Sleep.” <cite>Sleep Foundation</cite>, 4 Nov. 2020, www.sleepfoundation.org/how-sleep-works/myths-and-facts-about-sleep.</span>
+                  </div>  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="meeting-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  <p> The correct answer should be "All of above are myths"! <br>
+                    A boring meeting makes us sleepy is a <span style="color: #ff0000">MYTH</span>! <br>
+                    A boring meeting should not make you feel sleepy, but it may unmask sleepiness that is already present. <br>
+                    When our sleep debt/pressure is low, we would not feel sleepy in a boring meeting. 
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Debt & The Effects of Sleep Loss.</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="warm-room-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  <p> The correct answer should be "All of above are myths"! <br>
+                    A warm room makes us sleepy is a <span style="color: #ff0000">MYTH</span>! <br>
+                    It is because our sleep debt is high that makes us sleepy, not because of the warm room </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Debt & The Effects of Sleep Loss.</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="all-myths-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-correct">Correct </h4>
+                </div>
+                <div class="modal-body">
+                  <p> Yes! All of above are <span style="color: #ff0000">MYTH</span>!
+                    A warm room or a boring meeting should not make us feel sleepy. However, it might unmask sleepiness that is already present. The main reason that we feel sleepy might because our sleep pressure is high.
+                    "The brain remains active during sleep. Its patterns of activity change during different sleep stages, and in rapid eye movement (REM) sleep, 
+                    brain activity ramps up to a level that shares similarities with when you’re awake. Far from shutting down, shifts in brain activity during sleep are believed to be part of 
+                    why sleep is critical to effective thinking, memory, and emotional processing" (Suni).             
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Debt & The Effects of Sleep Loss.</cite> 2021. PowerPoint Presentation</span>
+                    <span>Suni, Eric. “Common Myths and Facts About Sleep.” <cite>Sleep Foundation</cite>, 4 Nov. 2020, www.sleepfoundation.org/how-sleep-works/myths-and-facts-about-sleep.</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+        <hr class="divider">
+      </div>
+
+      <!-- Fourth Question -->
+      <div id="fourth-question" style="display: none;">
+        <div class="same-background">
+          <div class="section-below">
+            <h2>Question #4</h2>
+            <p> Willy has a delayed sleep phase disorder(DSPD). He usually wakes up naturally at <b>2 pm</b>.
+              He wants to correct his circadian rhythm misalignment, so the doctor suggests he wakes up by the sunlight since light is a powerful zeitgeber.
+              It would help Willy advance his internal clock.
+              However, the doctor forgets to tell Willy which time he should have sunlight exposure. <br>
+              Can you help Willy find the correct time to start the sunlight exposure so that he will not have sunlight exposure at the wrong time, which might actually delay his sleep phase?
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex-container">
+          <div class="section-below" id="q4_imgs">
+            <img id="q4_character" src="./img/normal_will-removebg.png" />
+            <img id="7_will" src="./img/7am.png" style="display: none;"/>
+            <img id="9_will" src="./img/9am.png" style="display: none;" />
+            <img id="10_will" src="./img/10am.png" style="display: none;" />
+            <img id="12_will" src="./img/12pm.png" style="display: none;" />
+          </div>
+          
+          <div id="q4_option_container">
+            <button type="button" class="option" id="7am" data-toggle="modal" data-target="#7am-modal" onclick="active_button_q4(event)">7 am</button>
+            <button type="button" class="option" id="9am" data-toggle="modal" data-target="#9am-modal" onclick="active_button_q4(event)">9 am</button>
+            <button type="button" class="option" id="10am" data-toggle="modal" data-target="#10am-modal" onclick="active_button_q4(event)">10 am</button>
+            <button type="button" class="option" id="12pm" data-toggle="modal" data-target="#12pm-modal" onclick="active_button_q4(event)">12 pm</button>
+          </div>
+          <a href="#fifth-question"><button type="button" class="button" id="next-fifth-button">Next</button></a>
+        </div>
+  
+        <div class="container">
+          <!-- Modal -->
+          <div class="modal fade" id="7am-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  <p> 7 am is incorrect! We should have light exposure after the nadir of core body temperature(CBT). 
+                    Since exposure to the sunlight before CBT would actually cause the phase delay to happen.
+                    It would just be like exposure to light at night. 
+                    The nadir of our CBT would usually be 2 hours before the natural time we wake up.
+                    In this case, Willy usually wakes up naturally at 2 pm, which means he would probably have the nadir of CBT at around 12 pm.
+                    So the correct time to have sunlight exposure for Willy would be the time after 12 pm.
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Disorders & Treatment II:Circadian Rhythms DisordersParasomnias</cite> 2021. PowerPoint Presentation</span>
+                  </div>  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="9am-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  <p> 9 am is incorrect! We should have light exposure after the nadir of core body temperature(CBT). 
+                    Since exposure to the sunlight before CBT would actually cause the phase delay to happen.
+                    It would just be like exposure to light at night. 
+                    The nadir of our CBT would usually be 2 hours before the natural time we wake up.
+                    In this case, Willy usually wakes up naturally at 2 pm, which means he would probably have the nadir of CBT at around 12 pm.
+                    So the correct time to have sunlight exposure for Willy would be the time after 12 pm.
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Disorders & Treatment II:Circadian Rhythms DisordersParasomnias</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="10am-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  <p>  10 am is incorrect! We should have light exposure after the nadir of core body temperature(CBT). 
+                    Since exposure to the sunlight before CBT would actually cause the phase delay to happen.
+                    It would just be like exposure to light at night. 
+                    The nadir of our CBT would usually be 2 hours before the natural time we wake up.
+                    In this case, Willy usually wakes up naturally at 2 pm, which means he would probably have the nadir of CBT at around 12 pm.
+                    So the correct time to have sunlight exposure for Willy would be the time after 12 pm.
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Disorders & Treatment II:Circadian Rhythms DisordersParasomnias</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="12pm-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-correct">Correct</h4>
+                </div>
+                <div class="modal-body">
+                  <p> 12 pm is correct! We should have light exposure after the nadir of core body temperature(CBT). 
+                    Since exposure to the sunlight before CBT would actually cause the phase delay to happen.
+                    It would just be like exposure to light at night. 
+                    The nadir of our CBT would usually be 2 hours before the natural time we wake up.
+                    In this case, Willy usually wakes up naturally at 2 pm, which means he would probably have the nadir of CBT at around 12 pm.
+                    So the correct time to have sunlight exposure for Willy would be the time after 12 pm.
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Disorders & Treatment II:Circadian Rhythms DisordersParasomnias</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+        <hr class="divider">
+      </div>
+
+      <!-- Fifth Question -->
+      <div id="fifth-question" style="display: none;">
+        <div class="same-background">
+          <div class="section-below">
+            <h2>Question #5</h2>
+            <p> Willy only sleeps 4 hours per night over 2 nights. What is the physiological effect he might show?
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex-container">
+  
+          <div class="section-below" id="q5_imgs">
+            <img id="q5_character" src="./img/normal_will-removebg.png" />
+            <img id="hr_will" src="./img/hr.png" style="display: none;"/>
+            <img id="bp_will" src="./img/bp.png" style="display: none;" />
+            <img id="hunger_will" src="./img/hunger.png" style="display: none;" />
+            <img id="pain_will" src="./img/pain.png" style="display: none;" />
+          </div>
+          
+          <div id="q5_option_container">
+            <button type="button" class="option" id="hr" data-toggle="modal" data-target="#hr-modal" onclick="active_button_q5(event)">Increased Heart Rate</button>
+            <button type="button" class="option" id="bp" data-toggle="modal" data-target="#bp-modal" onclick="active_button_q5(event)">Decreased Blood Pressure</button>
+            <button type="button" class="option" id="hunger" data-toggle="modal" data-target="#hunger-modal" onclick="active_button_q5(event)">Decreased Hunger and Appetite</button>
+            <button type="button" class="option" id="pain" data-toggle="modal" data-target="#pain-modal" onclick="active_button_q5(event)">Increase Pain Tolerance</button>
+          </div>
+  
+        </div>
+  
+        <div class="container">
+          <!-- Modal -->
+          <div class="modal fade" id="hr-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-correct">Correct</h4>
+                </div>
+                <div class="modal-body">
+                  
+                  <p> 
+                    "In adults, sleep restriction to 4 hours per night over 1 - 2 nights has shown an <span style="color: #6b2cff">increased of heart rate</span>" (Shatkin and Baroni).
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Debt & The Effects of Sleep Loss.</cite> 2021. PowerPoint Presentation</span>
+                  </div>  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="bp-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  <p> "In adults, sleep restriction to 4 hours per night over 1 - 2 nights has shown an <span style="color: #6b2cff">increased of blood pressure</span>" (Shatkin and Baroni).
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Debt & The Effects of Sleep Loss.</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="hunger-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect</h4>
+                </div>
+                <div class="modal-body">
+                  <p> "In adults, sleep restriction to 4 hours per night over 1 - 2 nights has shown an <span style="color: #6b2cff">increased of hunger and appetite</span>" (Shatkin and Baroni). </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Debt & The Effects of Sleep Loss.</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="pain-modal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title-incorrect">Incorrect </h4>
+                </div>
+                <div class="modal-body">
+                  <p> "In adults, sleep restriction to 4 hours per night over 1 - 2 nights has shown a <span style="color: #6b2cff">decreased of pain tolerance</span>" (Shatkin and Baroni).         
+                  </p>
+                  <br /> 
+                  <div class="references">
+                    <p>References</p>
+                    <span>Shatkin, Jess, and Argelinda Baroni. <cite>Sleep Debt & The Effects of Sleep Loss.</cite> 2021. PowerPoint Presentation</span>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+        <hr class="divider">
+      </div>
     </div>    
   </body>
 </html>
-
-

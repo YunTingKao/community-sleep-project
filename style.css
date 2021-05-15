@@ -1,3 +1,11 @@
+/*
+    Author: Betty Kao
+    Date: May/4/2021
+
+    This is the style.css page for index.html
+    This is the style sheet that is used on index.html
+*/
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -32,6 +40,11 @@
 body {
   margin: 0;
 }
+
+p {
+  font-size: 15px;
+}
+
 .header {
   left: 0;
   top: 0;
@@ -103,12 +116,12 @@ body {
   background-color: rgb(246, 235, 246);
 }
 
-.options, #imgs, #next-second-button {
+.options, #next-second-button, #next-third-button, #next-fourth-button, #next-fifth-button {
   flex: 1;
   margin-top: 5px;
 }  
 
-#next-second-button {
+#next-second-button, #next-third-button, #next-fourth-button, #next-fifth-button {
   background-color: #ffcc41;
   border: none;
   border-radius: 5px;
@@ -121,17 +134,18 @@ body {
   font-size: 20px;
   box-shadow: 0 3px hsl(34, 100%, 50%);
   position:relative;
-  margin-top:100%;
+  /* margin-top:80%; */
 }
 
-#next-second-button:hover {
+#next-second-button:hover, #next-third-button:hover, #next-fourth-button:hover, #next-fifth-button:hover {
   background-color: #f8b706;
   cursor: pointer;
 }
 
 a {
   position:relative;
-  margin-top:10%;
+  margin-top:13%;
+  margin-bottom:2%;
 }
 
 .flex-child:first-child {
@@ -191,9 +205,9 @@ a {
   width: 80%;
 }
 
-.modal-body * {
-  font-family: sans-serif;
-}
+/* .modal-body * {
+  font-si: sans-serif;
+} */
 
 /* The Close Button */
 .close {
@@ -218,7 +232,7 @@ a {
   color: rgb(13, 153, 13);
 }
 
-#same-background {
+.same-background {
   background: linear-gradient(#bacbeb, #ecd8f0);
 }
 
@@ -233,4 +247,9 @@ a:hover {
 hr.divider {
   border-top: 3px dashed rgb(95, 37, 255);
   margin: 2px;
+}
+
+.references {
+  font-size: 10px;
+  font-family: sans-serif;
 }
